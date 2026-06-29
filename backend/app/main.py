@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.db.database import engine, Base
 from app import models
+from app.routers import precios  #
 
 app = FastAPI(
     title="SIPC-Formosa API",
