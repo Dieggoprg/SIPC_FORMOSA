@@ -21,6 +21,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(precios.router)  # Importa y registra el router de precios.
+
 # Al iniciar el servidor, crea automáticamente todas las tablas definidas
 # en los modelos si aún no existen en la base de datos.
 # En producción esto se reemplaza por migraciones con Alembic.
